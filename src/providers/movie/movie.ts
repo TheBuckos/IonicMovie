@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class MovieProvider {
-  console.log('Hello MovieProvider Provider');
+  
   savedMovies: any[]= [];
 
   api: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
