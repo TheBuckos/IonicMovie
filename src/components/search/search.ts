@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MovieProvider } from '..providers/movie/movie';
 
 /**
  * Generated class for the SearchComponent component.
@@ -12,11 +13,11 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
-  text: string;
-
-  constructor() {
-    console.log('Hello SearchComponent Component');
-    this.text = 'Hello World';
-  }
+  @Input() movieID;
+  
+  constructor(private _search: MovieProvider) {  }
+    addMovie(movie) {
+      console.log(movie);
+    }
 
 }
