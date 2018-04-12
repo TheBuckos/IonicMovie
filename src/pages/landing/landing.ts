@@ -17,6 +17,7 @@ import { MovieProvider } from '../providers/movie/movie';
 export class LandingPage {
   data: any;
   savedMovie: any;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public _movie: MovieProvider) {
   }
   searchMovie(movie){
