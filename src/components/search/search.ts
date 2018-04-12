@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-//import { MovieProvider } from '../../providers/movie/movie';
-
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'search',
@@ -8,16 +6,18 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
   
-  //private _movie: MovieProvider
+  query: string;
+  
+  @Output() 
+  update: EventEmitter<string> = new EventEmitter<string>();
   
   constructor() {
-    
   }
 
-  // getData(query: string){
-  //   this._movie.getData(query)
-  //     .subscribe((data){
-  //       console.log(data)
-  //     })
-  // }
+  updateQuery(){
+    console.log("Search bar sending query to landingPage", this.query)
+    this.update.emit(this.query);
+  }
+  
+  
 }

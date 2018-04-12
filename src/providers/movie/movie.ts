@@ -20,13 +20,12 @@ export class MovieProvider {
   
   getData(query: string){
     console.log(this.base_url + this.api + this.options + "&query=" + query)
-      return this.http.get(this.base_url + this.api + this.options + "&query=" + query)
-    }
-    selectMovie(movie){
+    return this.http.get(this.base_url + this.api + this.options + "&query=" + query)
+  }
+  
+  selectMovie(movie){
     this.savedMovies.push(movie);
-
     console.log(this.savedMovies);
-    
   }
 
   getMovie(movie){
