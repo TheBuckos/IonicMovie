@@ -1,5 +1,7 @@
-<ion-list>
-  <ion-item>
-    <ion-textarea placeholder="Enter a description"></ion-textarea>
-  </ion-item>
-</ion-list>
+<ion-item>
+    <ion-input 
+        placeholder= "movie title"
+        [(ngModel)]= "query"
+        (keyUp.enter)="updateQuery()">
+    </ion-input>
+</ion-item>
