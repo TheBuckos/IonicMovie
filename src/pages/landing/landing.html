@@ -3,12 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Movie Hound - landing22222</ion-title>
+    <ion-title>
+      <search
+        (update)=getData($event)>
+      </search>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <search
-  (update)=getData($event)>
-  </search>
+  <h3>Movie Hound</h3>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
