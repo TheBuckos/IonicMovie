@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LandingPage } from '../pages/landing/landing';
 import { SearchComponent } from '../components/search/search';
 
@@ -17,8 +15,6 @@ import { MovieProvider } from '../providers/movie/movie';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     LandingPage,
     SearchComponent
   ],
@@ -31,8 +27,6 @@ import { MovieProvider } from '../providers/movie/movie';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     LandingPage
   ],
   providers: [
