@@ -6,6 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { LandingPage } from '../pages/landing/landing';
+import { ExplorePage } from '../pages/explore/explore';
+import { FavoritesPage } from '../pages/favorites/favorites';
+import { TabsPage } from '../pages/tabs/tabs';
+
 import { SearchComponent } from '../components/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +20,9 @@ import { MovieProvider } from '../providers/movie/movie';
   declarations: [
     MyApp,
     LandingPage,
+    ExplorePage,
+    FavoritesPage,
+    TabsPage,
     SearchComponent
   ],
   imports: [
@@ -27,7 +34,10 @@ import { MovieProvider } from '../providers/movie/movie';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LandingPage
+    LandingPage,
+    ExplorePage,
+    FavoritesPage,
+    TabsPage
   ],
   providers: [
     StatusBar,

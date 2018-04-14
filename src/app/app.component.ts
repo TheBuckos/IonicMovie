@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { LandingPage } from '../pages/landing/landing';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -11,7 +11,7 @@ import { LandingPage } from '../pages/landing/landing';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LandingPage;
+  rootPage: any = TabsPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -31,9 +31,10 @@ export class MyApp {
         Horror
         ...
     */
-    this.pages = [
-      { title: 'Landing', component: LandingPage }
-    ];
+    
+    // this.pages = [
+    //   { title: 'Landing', component: LandingPage }
+    // ];
 
   }
 
