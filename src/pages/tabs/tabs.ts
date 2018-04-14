@@ -14,8 +14,8 @@ export class TabsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   
-  tab1Root = FavoritesPage;
-  tab2Root = LandingPage;
+  tab2Root = FavoritesPage;
+  tab1Root = LandingPage;
   tab3Root = ExplorePage;
 
 }

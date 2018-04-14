@@ -9,6 +9,7 @@ import { MovieProvider } from '../../providers/movie/movie';
 export class LandingPage {
 
   query: string;
+  movieList: any[];
   
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
@@ -20,6 +21,8 @@ export class LandingPage {
     this._movie.getData(this.query)
       .subscribe((data) => {
         console.log(data)
+        this.movieList = data.results;
+        console.log(this.movieList)
       })
   }
 }
