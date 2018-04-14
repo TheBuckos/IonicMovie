@@ -21,8 +21,7 @@ export class LandingPage {
     this._movie.getData(this.query)
       .subscribe((data) => {
         console.log(data)
-        this.movieList = data.results;
-        console.log(this.movieList)
+        this.movieList = data["results"];
       })
   }
 }
