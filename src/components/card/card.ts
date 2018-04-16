@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MovieProvider } from '../..providers/movie/movie';
+//import { MovieProvider } from '../../providers/movie/movie';
 
 /**
  * Generated class for the CardComponent component.
@@ -15,7 +15,7 @@ export class CardComponent {
 
   text: string;
 
-  constructor(public _movie: MovieProvider) {
+  constructor() {
   //  popularMovies(this._movie);
   }
 

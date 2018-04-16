@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { MovieProvider } from '../providers/movie/movie';
+import { MovieProvider } from '../../providers/movie/movie';
 
 @Component({
   selector: 'page-landing',
