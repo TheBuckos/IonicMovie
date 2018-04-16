@@ -11,6 +11,7 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { SearchComponent } from '../components/search/search';
+import { CardComponent } from '../components/card/card';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +24,8 @@ import { MovieProvider } from '../providers/movie/movie';
     ExplorePage,
     FavoritesPage,
     TabsPage,
-    SearchComponent
+    SearchComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
