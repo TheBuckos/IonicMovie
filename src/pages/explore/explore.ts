@@ -9,6 +9,8 @@ import { MovieProvider } from '../../providers/movie/movie';
 })
 export class ExplorePage {
 
+
+
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public _movie: MovieProvider) {
@@ -16,8 +18,13 @@ export class ExplorePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExplorePage');
+    
   }
-getPopularMovies(){
- // popularMovies();
-}
+  getPopMovies(movie){
+    this._movie.getPopularMovies(movie)
+    .subscribe((data) => {
+      console.log(data)
+      this.popMovieList = data["results"]
+    })
+  }
 }

@@ -1,13 +1,13 @@
 <!-- Generated template for the CardComponent component -->
-<div *ngFor="let item of movieList">
+<div *ngFor="let movie of popMoviesList">
 <ion-card>
   <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}"/>
   <ion-card-content>
     <ion-card-title>
-      {{movie.title}}
+      Title: {{movie.title}}
       </ion-card-title>
     <p>
-      {{movie.overview}}
+     Overview: {{movie.overview}}
     </p>
   </ion-card-content>
 </ion-card>

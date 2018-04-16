@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 export class MovieProvider {
   
   savedMovies: any[]= [];
+  popMovies: any[]=[];
 
   api: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
   options: string = "&include_adult=false&language=en-US";
@@ -33,8 +34,10 @@ export class MovieProvider {
     //console.log("Deleting " + this.savedMovies.title);
    
   }
-  popularMovies(){
+  getPopularMovies(movie){
+    this.popMovies.push(movie)
     return this.http.get(this.popular_movies);
   }
+
 }
 
