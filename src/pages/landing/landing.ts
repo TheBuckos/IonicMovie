@@ -10,6 +10,7 @@ export class LandingPage {
 
   query: string;
   movieList: any[];
+  popMovieList: any[];
   
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
@@ -23,5 +24,12 @@ export class LandingPage {
         console.log(data)
         this.movieList = data["results"];
       })
+  }
+  getPopMovies(movie){
+    this._movie.getPopularMovies(movie)
+    .subscribe((data) => {
+      console.log(data)
+      this.popMovieList = data["results"]
+    })
   }
 }

@@ -5,11 +5,13 @@ import { Injectable } from '@angular/core';
 export class MovieProvider {
   
   savedMovies: any[]= [];
+  popMovies: any[]=[];
 
   api: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
   options: string = "&include_adult=false&language=en-US";
   base_url: string = "https://api.themoviedb.org/3/search/movie";
-
+  popular_movies: string = "https://api.themoviedb.org/discover/movie?sort_by=popularity.desc";
+  
   constructor(private http: HttpClient) { }
   
   getData(query: string){
@@ -32,5 +34,10 @@ export class MovieProvider {
     //console.log("Deleting " + this.savedMovies.title);
    
   }
+  getPopularMovies(movie){
+    this.popMovies.push(movie)
+    return this.http.get(this.popular_movies);
+  }
+
 }
 
