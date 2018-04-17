@@ -9,20 +9,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><search
-        (update)=getData($event)>
-      </search></ion-title>
+    <ion-title>Movie Hound</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-
-  <h3>Movie Hound</h3>
-
-  <ion-list *ngFor = "let item of movieList">
-      <ion-item>{{item.title}}</ion-item>
-  </ion-list>
- 
+  
+  <search
+    (update)="getData($event)">
+  </search>
+  
+  <div *ngIf ="movieList">
+    <ion-list *ngFor = "let item of movieList">
+        <ion-item>{{item.title}}</ion-item>
+    </ion-list>
+  </div>
+  
+  <div *ngIf ="popMovieList">
+    <ion-list *ngFor ="let popItem of popMovieList">
+        <ion-item>{{popItem.title}}</ion-item>
+    </ion-list>
+  </div>
+  
 </ion-content>

@@ -18,13 +18,14 @@ export class ExplorePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExplorePage');
+    //this.getPopMovies();
     
   }
-  getPopMovies(movie){
-    this._movie.getPopularMovies(movie)
-    .subscribe((data) => {
-      console.log(data)
-      this.popMovieList = data["results"]
-    })
-  }
+  // getPopMovies(movie){
+  //   this._movie.getPopularMovies(movie)
+  //   .subscribe((data) => {
+  //     console.log(data)
+  //     this.popMovieList = data["results"]
+  //   })
+  // }
 }

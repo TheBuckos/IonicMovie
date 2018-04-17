@@ -9,6 +9,7 @@ import { MovieProvider } from '../../providers/movie/movie';
 export class LandingPage {
 
   query: string;
+  
   movieList: any[];
   popMovieList: any[];
   
@@ -16,20 +17,33 @@ export class LandingPage {
               public navParams: NavParams, 
               private _movie: MovieProvider) {}
   
-  getData(event){
+  public getData(event){
     this.query = event;
-    console.log("landingPage received query from search bar.", this.query)
-    this._movie.getData(this.query)
-      .subscribe((data) => {
-        console.log(data)
-        this.movieList = data["results"];
-      })
+    if(this.query){
+      console.log("landingPage received query from search bar.", this.query)
+      this._movie.getData(this.query)
+        .subscribe((data) => {
+          console.log(data)
+          this.movieList = data["results"];
+        })
+    }
+    else {
+      this.movieList = [];
+    }
   }
-  getPopMovies(movie){
-    this._movie.getPopularMovies(movie)
-    .subscribe((data) => {
-      console.log(data)
-      this.popMovieList = data["results"]
+
+  ionViewWillEnter(){
+    this.movieList = [];
+    this.popMovieList = [];
+    this.getPopularMovies();
+  }
+  
+  public getPopularMovies(){
+    this._movie.getPopMovies()
+      .subscribe( (data) => {
+        console.log(data)
+        this.popMovieList = data["results"];
     })
+    
   }
 }
