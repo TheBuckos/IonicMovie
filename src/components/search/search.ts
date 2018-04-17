@@ -17,9 +17,9 @@ export class SearchComponent {
   updateQuery(){
     console.log("Search bar sending query to landingPage", this.query)
     this.update.emit(this.query);
-    
-    
   }
   
-  
+  clearQuery(){
+    this.query = null;
+  }
 }
