@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { LandingPage } from '../pages/landing/landing';
 import { ExplorePage } from '../pages/explore/explore';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { SearchResultsPage } from '../pages/search-results/search-results';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { SearchComponent } from '../components/search/search';
@@ -23,6 +24,7 @@ import { MovieProvider } from '../providers/movie/movie';
     LandingPage,
     ExplorePage,
     FavoritesPage,
+    SearchResultsPage,
     TabsPage,
     SearchComponent,
     CardComponent
@@ -39,6 +41,7 @@ import { MovieProvider } from '../providers/movie/movie';
     LandingPage,
     ExplorePage,
     FavoritesPage,
+    SearchResultsPage,
     TabsPage
   ],
   providers: [

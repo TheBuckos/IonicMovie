@@ -7,6 +7,7 @@ export class MovieProvider {
   base_url: string = "https://api.themoviedb.org/3";
   base_search: string = "/search/movie";
   base_discover: string = "/discover/movie";
+  base_genre: string = '/genre/movie/list';
   
   api_key: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
   options: string = "&include_adult=false&language=en-US";
@@ -24,6 +25,10 @@ export class MovieProvider {
   public getPopMovies() {
     console.log("ran getPopMovies in provider")
     return this.http.get(this.base_url + this.base_discover + this.api_key + this.options + this.sort_pop);
+  }
+  
+  public getGenreList(){
+    return this.http.get(this.base_url + this.base_genre + this.api_key + this.options);
   }
   
   // public selectMovie(movie){

@@ -7,52 +7,31 @@
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content padding>
   
-  <search
-    (update)="getData($event)">
-  </search>
-  
-  <div *ngIf ="movieList">
-    <ion-list *ngFor = "let item of movieList">
-        <ion-item>{{item.title}}</ion-item>
-    </ion-list>
-  </div>
-  
- <!-- 
- <div *ngIf ="popMovieList">
-    <ion-list *ngFor ="let popItem of popMovieList">
-        <ion-item>{{popItem.title}}</ion-item>
-    </ion-list>
-  </div>
--->
-  
   <div *ngIf ="popMovieList">
-    <p></p>
     <h4>Popular Movies</h4>
     <div *ngFor="let popMovieCards of popMovieList">
       <ion-card>
-      <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{popMovieCards.poster_path}}"/>
-      <ion-card-content>
-      <ion-card-title>
-        {{popMovieCards.title}}
-        </ion-card-title>
-      <p>
-       Rating: {{popMovieCards.vote_average}}
-       </p>
-       <p>
-         Release Date: {{popMovieCards.release_date}}
-       </p>
-       <p>
-       Genre: {{popMovieCards.genre_ids}}
-      </p>
-      
-      </ion-card-content>
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{popMovieCards.poster_path}}"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{popMovieCards.title}}
+          </ion-card-title>
+          <p>
+            Rating: {{popMovieCards.vote_average}}
+          </p>
+          <p>
+            Release Date: {{popMovieCards.release_date | date:'mediumDate'}}
+          </p>
+          <p>
+            Genre: {{popMovieCards.genre_ids}}
+          </p>
+        </ion-card-content>
       </ion-card>
     </div>
   </div>
+  
 </ion-content>
 
 

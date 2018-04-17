@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { FavoritesPage } from '../favorites/favorites'
 import { LandingPage } from '../landing/landing'
 import { ExplorePage } from '../explore/explore'
+import { SearchResultsPage } from '../search-results/search-results'
 
 @Component({
   selector: 'page-tabs',
@@ -16,6 +17,7 @@ export class TabsPage {
   
   tab1Root = FavoritesPage;
   tab2Root = LandingPage;
-  tab3Root = ExplorePage;
+  tab3Root = SearchResultsPage;
+  tab4Root = ExplorePage;
 
 }

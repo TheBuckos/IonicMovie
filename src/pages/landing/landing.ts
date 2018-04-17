@@ -7,33 +7,13 @@ import { MovieProvider } from '../../providers/movie/movie';
   templateUrl: 'landing.html',
 })
 export class LandingPage {
-
-  query: string;
-  
-  movieList: any[];
   popMovieList: any[];
   
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               private _movie: MovieProvider) {}
-  
-  public getData(event){
-    this.query = event;
-    if(this.query){
-      console.log("landingPage received query from search bar.", this.query)
-      this._movie.getData(this.query)
-        .subscribe((data) => {
-          console.log(data)
-          this.movieList = data["results"];
-        })
-    }
-    else {
-      this.movieList = [];
-    }
-  }
 
   ionViewWillEnter(){
-    this.movieList = [];
     this.popMovieList = [];
     this.getPopularMovies();
   }
