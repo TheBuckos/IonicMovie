@@ -37,10 +37,13 @@
       <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{popMovieCards.poster_path}}"/>
       <ion-card-content>
       <ion-card-title>
-        Title: {{popMovieCards.title}}
+        {{popMovieCards.title}}
         </ion-card-title>
       <p>
        Rating: {{popMovieCards.vote_average}}
+       </p>
+       <p>
+       Genre: {{popMovieCards.genre_ids}}
       </p>
       </ion-card-content>
       </ion-card>
