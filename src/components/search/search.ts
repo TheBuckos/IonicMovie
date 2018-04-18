@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'search',
@@ -10,8 +10,10 @@ export class SearchComponent {
   
   /*Creates an EventEmitter "update" that will update the value of 
   query thorugh the updateQuery method */
-  @Output() 
-  update: EventEmitter<string> = new EventEmitter<string>();
+  @Output() update: EventEmitter<string> = new EventEmitter<string>();
+  
+  //Creates template reference
+  @ViewChild("myInput") input: ElementRef;
   
   constructor() {
   }
@@ -27,4 +29,9 @@ export class SearchComponent {
   public clearQuery(){
     this.query = null;
   }
+  
+  // public autoFocus(){
+  //   console.log('Also in')
+  //   this.input.elementRef.ionFocus;
+  // }
 }

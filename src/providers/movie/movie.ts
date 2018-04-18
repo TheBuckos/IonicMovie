@@ -4,26 +4,29 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MovieProvider {
 
+  //Base_url
   base_url: string = "https://api.themoviedb.org/3";
+  
+  //type of query
   base_search: string = "/search/movie";
   base_discover: string = "/discover/movie";
   base_genre: string = '/genre/movie/list';
   
+  //api
   api_key: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
-  options: string = "&include_adult=false&language=en-US";
   
+  //options
+  options: string = "&include_adult=false&language=en-US";
   sort_pop: string = "&sort_by=popularity.desc";
   
   constructor(private http: HttpClient) { }
   
   public getData(query: string) {
-    console.log("ran getData in provider")
     return this.http.get(this.base_url + this.base_search + this.api_key + this.options + "&query=" + query)
       
   }
   
   public getPopMovies() {
-    console.log("ran getPopMovies in provider")
     return this.http.get(this.base_url + this.base_discover + this.api_key + this.options + this.sort_pop);
   }
   

@@ -39,6 +39,14 @@ export class SearchResultsPage {
     this.movieList = [];
   }
   
+  ionViewDidEnter(){
+    console.log("I'm in!", this._search)
+    setTimeout(()=>{
+      this._search.input.setFocus();
+    },250)
+    
+  }
+  
   ionViewDidLeave(){
     //calls clearQuery on searchComponent 
     this._search.clearQuery()
