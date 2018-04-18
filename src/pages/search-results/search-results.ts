@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MovieProvider } from '../../providers/movie/movie';
 import { SearchComponent } from '../../components/search/search'
