@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MovieProvider } from '../../providers/movie/movie';
 
 
@@ -7,11 +7,14 @@ import { MovieProvider } from '../../providers/movie/movie';
   templateUrl: 'card.html'
 })
 export class CardComponent {
-  popMoviesList: any[];
-  text: string;
+    
+  @Input() poster_path: string;
+  @Input() title: string;
+  @Input() rating: string;
+  @Input() release_date: string;
+  @Input() genre: string;
 
   constructor(public _movie: MovieProvider) {
-   // this.popMoviesList = this._movie.popular_movies; 
     }
 
 }

@@ -1,13 +1,13 @@
-<div *ngFor="let movie of popMovieList">
 <ion-card>
-  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}"/>
+  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}"/>
   <ion-card-content>
-    <ion-card-title>
-      Title: {{movie.title}}
-      </ion-card-title>
-    <p>
-     Overview: {{movie.overview}}
-    </p>
+    <ion-card-title>{{title}}</ion-card-title>
+    
+    <p>Rating: {{rating}}</p>
+    
+    <p>Release Date: {{release_date | date:'mediumDate'}}</p>
+    
+    <p>Genre: {{genre}}</p>
+    
   </ion-card-content>
 </ion-card>
-</div>
