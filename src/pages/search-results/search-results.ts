@@ -17,10 +17,11 @@ export class SearchResultsPage {
               private _movie: MovieProvider) {
   }
   
+  /*This method is bound to the update event in the child searchComponent, 
+  and will be called anytime that a new keystroke updates the query*/
   public getData(event){
     this.query = event;
     if(this.query){
-      console.log("landingPage received query from search bar.", this.query)
       this._movie.getData(this.query)
         .subscribe((data) => {
           console.log(data)
@@ -37,8 +38,9 @@ export class SearchResultsPage {
     //clears movie list on page enter.
     this.movieList = [];
   }
+  
   ionViewDidLeave(){
-    console.log("Bye")
+    //calls clearQuery on searchComponent 
     this._search.clearQuery()
   }
 
