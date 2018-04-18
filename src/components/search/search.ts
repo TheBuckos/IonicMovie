@@ -13,7 +13,7 @@ export class SearchComponent {
   @Output() update: EventEmitter<string> = new EventEmitter<string>();
   
   //Creates template reference
-  @ViewChild("myInput") input: ElementRef;
+  @ViewChild("myInput") input: any;
   
   constructor() {
   }

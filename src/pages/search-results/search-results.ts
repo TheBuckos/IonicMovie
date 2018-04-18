@@ -41,10 +41,9 @@ export class SearchResultsPage {
   
   ionViewDidEnter(){
     console.log("I'm in!", this._search)
-    setTimeout(()=>{
+    setTimeout( () => {
       this._search.input.setFocus();
-    },250)
-    
+    },250);
   }
   
   ionViewDidLeave(){

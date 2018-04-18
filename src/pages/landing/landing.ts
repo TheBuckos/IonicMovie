@@ -35,9 +35,7 @@ export class LandingPage {
   public getGenreList(){
     this._movie.getGenreList()
       .subscribe((data)=>{
-        console.log(data)
         this.genreList = data["genres"];
-        console.log(this.genreList)
       })
   }
   
