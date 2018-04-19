@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-slides *ngIf ="popMovieList">
-    <ion-slide *ngFor="let popMovie of popMovieList">
+    <ion-slide class= "card" *ngFor="let popMovie of popMovieList">
       <card
         [poster_path]="popMovie.poster_path"
         [title]="popMovie.title"
