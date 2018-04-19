@@ -8,9 +8,8 @@
 </ion-header>
 
 <ion-content padding>
-  <h4>Popular Movies</h4>
-  <div class="card-container" *ngIf ="popMovieList">
-    <div  class = "card" *ngFor="let popMovie of popMovieList">
+  <ion-slides *ngIf ="popMovieList">
+    <ion-slide *ngFor="let popMovie of popMovieList">
       <card
         [poster_path]="popMovie.poster_path"
         [title]="popMovie.title"
@@ -18,8 +17,8 @@
         [release_date]="popMovie.release_date"
         [genre]="popMovie.genre_ids">
       </card>
-    </div>
-  </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
 
 
