@@ -40,8 +40,8 @@ export class SearchResultsPage {
   }
   
   ionViewDidEnter(){
-    console.log("I'm in!", this._search)
-    setTimeout( () => {
+    setTimeout(() => {
+      console.log
       this._search.input.setFocus();
     },250);
   }

@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-slides *ngIf ="popMovieList">
+  <ion-slides class="carousel" *ngIf ="popMovieList">
     <ion-slide class= "card" *ngFor="let popMovie of popMovieList">
-      <card
+      <card 
         [poster_path]="popMovie.poster_path"
         [title]="popMovie.title"
         [rating]="popMovie.vote_average"
