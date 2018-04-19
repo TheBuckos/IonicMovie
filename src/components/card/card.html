@@ -1,13 +1,13 @@
-<ion-card>
+<ion-card class= "card-content">
   <img class = "card-img" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}"/>
   <ion-card-content>
-    <ion-card-title>{{title}}</ion-card-title>
+    <ion-card-title class = "card-title">{{title}}</ion-card-title>
     
-    <p>Rating: {{rating}}</p>
+    <p class= "card-rating">Rating: {{rating}}</p>
     
-    <p>Release Date: {{release_date | date:'mediumDate'}}</p>
+    <p class= "card-date">Release Date: {{release_date | date:'mediumDate'}}</p>
     
-    <p>Genre(s): {{genre}}</p>
+    <p class= "card-genre">Genre(s): {{genre}}</p>
     
   </ion-card-content>
 </ion-card>
